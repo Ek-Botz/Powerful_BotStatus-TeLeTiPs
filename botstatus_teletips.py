@@ -52,7 +52,7 @@ async def main_teletips():
                 last_update = time.strftime(f"%d %b %Y at %I:%M %p")
                 xxx_teletips += "\n\n**Open-Source Repo** \n- [Password-Generator-Bot](http://github.com/M-fazin/Password-Generator-Bot) \n- [Lyrics-Search-Bot](https://github.com/M-fazin/Lyrics-Search-Bot) \n\n**Github** \nhttps://github.com/M-fazin" 
                 xxx_teletips += f"\n\n\n✔️ Last checked on: {last_update} ({TIME_ZONE})\n\n<i>♻️ Updates every 45min</i>"
-                await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
+                await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips, disable_web_page_preview=True)
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(6300)
                         
